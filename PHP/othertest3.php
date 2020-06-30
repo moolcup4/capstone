@@ -39,8 +39,13 @@
    if($result === false){
        echo  mysqli_error($connect);
    }
-   // mysql_close(); //끝내기
-   // echo $sql;
+   
+   $query2="insert into temp(product_name,temper,size,amount,product_price,regdate,name) values('$product_name','$temper','$size','$amount','$product_price','$regdate', '$var_value')";
+   
+   $result2 = mysqli_query($connect, $query2);
+   if($result2 === false){
+       echo  mysqli_error($connect);
+   }
    
 ?>
 

@@ -85,8 +85,20 @@
                         </tr>
 
                 <?php
+                    // $conn=mysqli_connect('localhost','root','dgu1234!','kiosk');
+                    // $sql = "select * from user where name='$var_value' order by regdate desc limit 3";
+                    // $result = mysqli_query($conn, $sql);
+
+                    // while($row = mysqli_fetch_array($result)){
+                    //     echo '<tr><td>'.$row['product_name'].'</td>';   
+                    //     echo '<td>'.$row['temper'].'</td>';
+                    //     echo '<td>'.$row['size'].'</td>';
+                    //     echo '<td>'.$row['amount'].'</td>';
+                    //     echo '<td>'.$row['product_price'].'</td>';
+                    //     echo '<td>'.$row['regdate'].'</td></tr>';
+                    // }
                     $conn=mysqli_connect('localhost','root','dgu1234!','kiosk');
-                    $sql = "select * from user where name='$var_value' order by regdate desc limit 3";
+                    $sql = "select * from temp where name='$var_value' order by regdate desc limit 3";
                     $result = mysqli_query($conn, $sql);
 
                     while($row = mysqli_fetch_array($result)){
@@ -97,6 +109,8 @@
                         echo '<td>'.$row['product_price'].'</td>';
                         echo '<td>'.$row['regdate'].'</td></tr>';
                     }
+
+
                   ?>     
 
                 </table>
